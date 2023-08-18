@@ -14,13 +14,11 @@
       $num = $_REQUEST["num"] ?? 0;
       
       echo "O número escolhido é <strong>$num</strong> <br>";
-      echo "O seu antecessor é: ". ($num - 1) ."<br>";
-      echo "O seu sucessor é: ". ($num + 1) ."<br>";
+      echo "O seu antecessor é: <em>". ($num - 1) ."</em><br>";
+      echo "O seu sucessor é: <em>". ($num + 1) ."</em><br>";
       ?>
     </p>
-    <p>
-      <a href="javascript:history.go(-1)">Voltar para página anterior</a>
-    </p>
+    <button onclick="javascript:history.go(-1)">&#x2B05; Voltar</button>
   </main>
 </body>
 </html>
