@@ -9,16 +9,16 @@
 <body>
   <?php
     //Capturando os dados do Formulário Retroalimentado
-    $real = floatval(str_replace(',', '.', $_POST["real"])) ?? 0;
+    $dividendo = $_GET['dividendo'] ?? 1;
     $divisor = $_GET['divisor'] ?? 1;
   ?>
   <main>
     <h1>Anatomia de uma Divisão</h1>
     <form action="<?=$_SERVER['PHP_SELF']?>" method="get"?>
       <label for="dividendo">Dividendo</label>  
-      <input type="number" name="dividendo" id="dividendo" value="<?=$valor1?>">
+      <input type="number" name="dividendo" id="dividendo" value="<?=$dividendo?>">
       <label for="divisor">Divisor</label>  
-      <input type="number" name="divisor" id="divisor" value="<?=$valor2?>">
+      <input type="number" name="divisor" id="divisor" value="<?=$divisor?>">
       <input type="submit" value="Dividir">
     </form>
   </main>
